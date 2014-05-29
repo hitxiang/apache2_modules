@@ -1,3 +1,5 @@
 mod_foo/build/
 mod_foo/dist/
 mod_foo/nbproject/private
+*.o
+*.o.d
