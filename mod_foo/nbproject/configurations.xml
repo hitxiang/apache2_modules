@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="94">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="f1" displayName="Apache" projectFiles="true">
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="Application" projectFiles="true">
+        <itemPath>include/CApplication.hpp</itemPath>
+      </logicalFolder>
+      <itemPath>include/mod_foo.hpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="f1" displayName="Apache" projectFiles="true">
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="Application" projectFiles="true">
+        <itemPath>src/CApplication.cpp</itemPath>
+      </logicalFolder>
+      <itemPath>src/mod_foo.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>src</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>/usr/include/apache2</pElem>
+            <pElem>/usr/include/apr-1</pElem>
+            <pElem>/usr/local/include</pElem>
+            <pElem>/usr/include</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>/usr/include/apache2</pElem>
+            <pElem>/usr/include/apr-1</pElem>
+            <pElem>/usr/local/include</pElem>
+            <pElem>/usr/include</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/mod_foo.${CND_DLIB_EXT}</output>
+          <linkerAddLib>
+            <pElem>/usr/lib</pElem>
+            <pElem>/usr/local/lib</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibStdlibItem>PosixThreads</linkerLibStdlibItem>
+            <linkerOptionItem>-lapr-1</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="include/CApplication.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/mod_foo.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/CApplication.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/mod_foo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>/usr/include/apache2</pElem>
+            <pElem>/usr/include/apr-1</pElem>
+            <pElem>/usr/local/include</pElem>
+            <pElem>/usr/include</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>/usr/include/apache2</pElem>
+            <pElem>/usr/include/apr-1</pElem>
+            <pElem>/usr/local/include</pElem>
+            <pElem>/usr/include</pElem>
+          </incDir>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/mod_foo.${CND_DLIB_EXT}</output>
+        </linkerTool>
+      </compileType>
+      <item path="include/CApplication.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/mod_foo.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/CApplication.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/mod_foo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
