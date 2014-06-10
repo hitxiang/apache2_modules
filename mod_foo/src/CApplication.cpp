@@ -7,6 +7,8 @@
 
 #include "CApplication.hpp"
 
+#include <string>
+
 int
 CApplication::RunHandler()
 {
@@ -14,7 +16,10 @@ CApplication::RunHandler()
 	
     if ( m_pRequestRec->handler != NULL && strcmp( m_pRequestRec->handler, "foo" ) == 0 )
     {
-        ap_rputs( "Hello World from FOO", m_pRequestRec );
+        std::string result = "This is apache foo module\n";
+        result += "Client ip:";
+        result += m_pRequestRec->connection->remote_ip ;
+        ap_rputs( result.c_str(), m_pRequestRec );
         nReturnVal = OK;
     }
 
