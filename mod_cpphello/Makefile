@@ -4,8 +4,17 @@
 ##  This is a C++ module so things have to be handled a little differently.
 
 #   the used tools
-APXS=apxs
-APACHECTL=apachectl
+OS := $(shell lsb_release -si)
+ifeq ($(OS), Debian)
+  APXS=apxs2
+  APACHECTL=apachectl
+else ifeq ($(OS), Centos)
+  APXS=apxs
+  APACHECTL=apachectl
+else
+  APXS=apxs
+  APACHECTL=apachectl
+endif
 
 # Get all of apxs's internal values.
 APXS_CC=`$(APXS) -q CC`   
