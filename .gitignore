@@ -4,3 +4,4 @@ mod_foo/nbproject/private
 *.o
 *.so
 *.o.d
+*.plist

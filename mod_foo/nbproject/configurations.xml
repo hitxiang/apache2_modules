@@ -83,6 +83,8 @@
       </item>
       <item path="include/mod_foo.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="modules.mk" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="src/CApplication.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/mod_foo.cpp" ex="false" tool="1" flavor2="0">
@@ -128,6 +130,8 @@
       <item path="include/CApplication.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/mod_foo.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modules.mk" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/CApplication.cpp" ex="false" tool="1" flavor2="0">
       </item>
