@@ -17,10 +17,17 @@
 #define EXTERN_C_BLOCK_END
 #define EXTERN_C_FUNC
 #endif
-
-#include <httpd.h>
-#include <http_protocol.h>
-#include <http_config.h>
+#include "ap_config.h"
+#include "apr.h"
+#include "apr_lib.h"
+#include "apr_strings.h"
+#include "apr_network_io.h"
+#include "apr_want.h"
+#include "httpd.h"
+#include "http_config.h"
+#include "http_core.h"
+#include "http_request.h"
+#include "http_protocol.h"
 
 #endif	/* MOD_FOO_HPP */
 

@@ -8,9 +8,9 @@ APXS=apxs2
 APACHECTL=apachectl
 
 # project specific config
-SHIB_CFLAGS=-Iinclude
+SHIB_CFLAGS=-std=c++0x -Iinclude
 SHIB_LDFLAGS=-Llib
-SHIB_LIBS=
+SHIB_LIBS=-std=c++0x 
 
 
 
@@ -35,8 +35,8 @@ all: mod_foo.so
 # compile and link.
 
 # compile
-mod_foo.o: src/mod_foo.cpp src/CApplication.cpp
-	g++ -c -fPIC $(SHIB_CFLAGS) -I$(APXS_INCLUDEDIR) -I/usr/include/apr-1/ $(APXS_CFLAGS) $(APXS_CFLAGS_SHLIB) -Wall -o $@ $< 
+mod_foo.o: src/mod_foo.cpp src/CApplication.cpp 
+	g++ -c -fPIC $(SHIB_CFLAGS) -I$(APXS_INCLUDEDIR) $(APXS_CFLAGS) $(APXS_CFLAGS_SHLIB) -Wall -o $@ $< 
 
 # link
 mod_foo.so: mod_foo.o 

@@ -17,7 +17,7 @@ Collapse | Copy Code
 LoadModule foo_module modules/mod_foo.so
 <Location /foo>
     SetHandler foo
-</Location /foo>
+</Location>
 
 And finally to run Apache in single process/non-thread mode invoke with httpd –X which will cause Apache to run until you kill it with Ctrl-C and then point your favourite Firefox at <a href="http://localhost/foo">http://localhost/foo</a> and if it all worked you should see your "Hello World from FOO" printed.
 Debugging
