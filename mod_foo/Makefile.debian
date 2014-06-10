@@ -44,7 +44,7 @@ mod_foo.so: mod_foo.o
 
 # install the shared object file into Apache 
 install: all
-	$(APXS) -i -a -n 'cpphello' mod_foo.so
+	$(APXS) -i -a -n 'foo' mod_foo.so
 
 # display the apxs variables
 check_apxs_vars:
