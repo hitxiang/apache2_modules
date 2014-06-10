@@ -19,6 +19,7 @@ CApplication::RunHandler()
         std::string result = "This is apache foo module\n";
         result += "Client ip:";
         result += m_pRequestRec->connection->remote_ip ;
+        result += "\n";
         ap_rputs( result.c_str(), m_pRequestRec );
         nReturnVal = OK;
     }

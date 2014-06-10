@@ -35,12 +35,15 @@ all: mod_foo.so
 # compile and link.
 
 # compile
-mod_foo.o: src/mod_foo.cpp src/CApplication.cpp 
-	g++ -c -fPIC $(SHIB_CFLAGS) -I$(APXS_INCLUDEDIR) $(APXS_CFLAGS) $(APXS_CFLAGS_SHLIB) -Wall -o $@ $< 
+mod_foo.o: src/mod_foo.cpp
+	g++ -c -fPIC $(SHIB_CFLAGS) -I$(APXS_INCLUDEDIR) $(APXS_CFLAGS) $(APXS_CFLAGS_SHLIB) -Wall -o $@ $^ 
+
+CApplication.o: src/CApplication.cpp 
+	g++ -c -fPIC $(SHIB_CFLAGS) -I$(APXS_INCLUDEDIR) $(APXS_CFLAGS) $(APXS_CFLAGS_SHLIB) -Wall -o $@ $^ 
 
 # link
-mod_foo.so: mod_foo.o 
-	g++ -fPIC -shared $(SHIB_LDFLAGS) $(SHIB_LIBS) -L/usr/local/lib -L/usr/lib -o $@ $< $(APXS_LIBS_SHLIB)
+mod_foo.so: CApplication.o mod_foo.o 
+	g++ -fPIC -shared $(SHIB_LDFLAGS) $(SHIB_LIBS) -L/usr/local/lib -L/usr/lib -o $@ $^ $(APXS_LIBS_SHLIB)
 
 # install the shared object file into Apache 
 install: all
